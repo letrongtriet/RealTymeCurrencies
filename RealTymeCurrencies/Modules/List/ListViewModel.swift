@@ -92,7 +92,7 @@ final class ListViewModel: ObservableObject {
             )
             state = .data(cryptoCurrencies)
         } catch {
-            state = .error(error.localizedDescription)
+            state = .error("Oops! something went wrong, please select another Fiat currency")
         }
     }
 }

@@ -23,7 +23,7 @@ final class ListViewModelTests: XCTestCase {
         viewModel.onAppear()
         try? await Task.sleep(nanoseconds: UInt64(1 * 1_000_000_000))
 
-        XCTAssert(viewModel.state == .error("The operation couldn’t be completed. (RealTymeCurrencies.APIError error 1.)"))
+        XCTAssert(viewModel.state == .error("Oops! something went wrong, please select another Fiat currency"))
 
         // In case of failed, we still get the default list
         XCTAssert(viewModel.fiatCurrencies ==  ["usd"])
